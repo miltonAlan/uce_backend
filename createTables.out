@@ -1,2 +1,0 @@
-psql:createTables.sql:1: NOTICE:  la tabla «sid_registros_padre» no existe, ignorando
-psql:createTables.sql:7: NOTICE:  CREATE TABLE / PRIMARY KEY creará el índice implícito «cliente_pkey» para la tabla «sid_registros_padre»

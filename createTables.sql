@@ -1,4 +1,4 @@
-/*Eliminacio de tablas...*/
+/*Eliminacio de tablas...*/ 
 drop table if exists af_historico;
 drop table if exists af_activo_fijo;
 drop table if exists af_concepto;

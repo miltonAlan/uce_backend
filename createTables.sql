@@ -3,6 +3,7 @@ drop table if exists af_historico;
 drop table if exists af_activo_fijo;
 drop table if exists af_concepto;
 drop table if exists af_usuario;
+drop table if exists af_variables;
 
 -- af_concepto
 create table af_concepto
@@ -66,4 +67,14 @@ create table af_historico
   CONSTRAINT af_historico_af_ah_consecutivo_fkey FOREIGN KEY (af_ah_consecutivo)
       REFERENCES af_activo_fijo (af_consecutivo) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+
+-- af_variables
+create table af_variables
+(
+  av_consecutivo double precision NOT NULL,
+  av_variable character varying(255),
+  av_descripcion character varying(255),
+  av_valor character(255),
+  CONSTRAINT af_variables_pkey PRIMARY KEY (av_consecutivo)
 );

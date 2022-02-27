@@ -1,9 +1,8 @@
-/*Eliminacio de tablas...*/ 
+/*Eliminacio de tablas...*/
 drop table if exists af_historico;
 drop table if exists af_activo_fijo;
 drop table if exists af_concepto;
 drop table if exists af_usuario;
-drop table if exists af_ejemplo;
 
 -- af_concepto
 create table af_concepto
@@ -67,12 +66,4 @@ create table af_historico
   CONSTRAINT af_historico_af_ah_consecutivo_fkey FOREIGN KEY (af_ah_consecutivo)
       REFERENCES af_activo_fijo (af_consecutivo) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION
-);
-
-
--- af_ejemplo
-create table af_ejemplo
-(
-  af_ejem character (1) NOT NULL,
-  CONSTRAINT af_ejemplo_pkey PRIMARY KEY (af_ejem)
 );

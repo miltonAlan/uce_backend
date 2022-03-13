@@ -8,10 +8,10 @@ drop table if exists af_variables;
 -- af_concepto
 create table af_concepto
 (
-  ac_consecutivo double precision NOT NULL,
+  ac_consecutivo integer not null,
   ac_concepto character varying(255),
-  ac_depreciable character varying(1),
-  ac_estado character varying(1),
+  ac_depreciable character varying(255),
+  ac_estado character varying(255),
   CONSTRAINT af_concepto_pkey PRIMARY KEY (ac_consecutivo),
   CONSTRAINT af_concepto_ac_concepto_key UNIQUE (ac_concepto)
 );

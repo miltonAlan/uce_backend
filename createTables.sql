@@ -19,7 +19,7 @@ create table af_concepto
 -- af_usuario
 create table af_usuario
 (
-  au_consecutivo double precision NOT NULL,
+  au_consecutivo integer NOT NULL,
   au_nombre character varying(100),
   au_apellido character varying(100),
   au_fecha_nacimiento character varying(100),
@@ -43,7 +43,7 @@ create table af_activo_fijo
   af_codigo_barras character varying(100),
   af_periodo_dep double precision,
   af_fecha_creacion character varying(100),
-  au_af_consecutivo double precision,
+  au_af_consecutivo integer,
   CONSTRAINT af_activo_fijo_pkey PRIMARY KEY (af_consecutivo),
   CONSTRAINT af_activo_fijo_ac_af_concepto_fkey FOREIGN KEY (ac_af_concepto)
       REFERENCES af_concepto (ac_concepto) MATCH SIMPLE

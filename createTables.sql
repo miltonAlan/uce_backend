@@ -59,14 +59,12 @@ create table af_historico
 (
   af_ah_consecutivo integer NOT NULL,
   ah_fecha character varying(100) NOT NULL,
-  ah_movimiento character varying(100) NOT NULL,
+  ah_movimiento character varying(200) NOT NULL,
   ah_valor double precision,
   ah_periodo double precision,
-  ah_responsable character varying(100),
-  CONSTRAINT af_historico_pkey PRIMARY KEY (af_ah_consecutivo),
-  CONSTRAINT af_historico_af_ah_consecutivo_fkey FOREIGN KEY (af_ah_consecutivo)
-      REFERENCES af_activo_fijo (af_consecutivo) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION
+  ah_responsable_ant character varying(100),
+  ah_responsable_act character varying(100),
+  CONSTRAINT af_historico_pkey PRIMARY KEY (af_ah_consecutivo)
 );
 
 -- af_variables

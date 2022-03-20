@@ -33,20 +33,20 @@ create table af_usuario
 -- af_activo_fijo
 create table af_activo_fijo
 (
-  af_consecutivo double precision NOT NULL,
-  af_estado character varying(1),
+  af_consecutivo integer NOT NULL,
+  af_estado character varying(100),
   af_marca character varying(100),
   af_modelo character varying(100),
-  ac_af_concepto character varying(100),
+  ac_af_concepto integer,
   af_valor double precision,
   af_dep_acum double precision,
   af_codigo_barras character varying(100),
-  af_periodo_dep double precision,
+  af_periodo_dep integer,
   af_fecha_creacion character varying(100),
   au_af_consecutivo integer,
   CONSTRAINT af_activo_fijo_pkey PRIMARY KEY (af_consecutivo),
   CONSTRAINT af_activo_fijo_ac_af_concepto_fkey FOREIGN KEY (ac_af_concepto)
-      REFERENCES af_concepto (ac_concepto) MATCH SIMPLE
+      REFERENCES af_concepto (ac_consecutivo) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION,
   CONSTRAINT af_activo_fijo_au_af_consecutivo_fkey FOREIGN KEY (au_af_consecutivo)
       REFERENCES af_usuario (au_consecutivo) MATCH SIMPLE
@@ -57,7 +57,7 @@ create table af_activo_fijo
 
 create table af_historico
 (
-  af_ah_consecutivo double precision NOT NULL,
+  af_ah_consecutivo integer NOT NULL,
   ah_fecha character varying(100) NOT NULL,
   ah_movimiento character varying(100) NOT NULL,
   ah_valor double precision,

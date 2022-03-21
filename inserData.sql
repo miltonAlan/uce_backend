@@ -46,6 +46,9 @@ values ('9', 'Xavier', 'Hernandez', '16/03/2022', 'fig656', 'XaviB6', '173225645
 insert into af_usuario (au_consecutivo, au_nombre, au_apellido, au_fecha_nacimiento, au_clave, au_login, au_cedula, au_cargo) 
 values ('10', 'Nicole', 'Chicaiza', '15/03/2022', 'caraM12', 'nicole0998', '1725138522', 'Administrador'); 
 
+insert into af_usuario (au_consecutivo, au_nombre, au_apellido, au_fecha_nacimiento, au_clave, au_login, au_cedula, au_cargo) 
+values ('11', 'Milton', 'Paucar', '15/03/1999', '1', 'mpaucar', '1725138522', 'Gerente'); 
+
 --ingreso activos fijos
 delete from af_activo_fijo;
 

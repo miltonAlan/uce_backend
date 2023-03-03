@@ -125,3 +125,7 @@ insert into af_activo_fijo(af_consecutivo, af_estado,        af_marca,         a
                     values(11,              'Vigente',        'N/A',          'Terreno 2000 ha',   3, 
                            25000,           0,                '123413212',       0,                '01/09/1999',
                            1);                                                                                   
+
+
+
+--nuevo registro de algo                           
